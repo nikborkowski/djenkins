@@ -76,10 +76,10 @@ node {
             // -------------------------------------------------------------------------
 
             stage('Push To Test Scratch Org') {
-                rc = command "${toolbelt}/sfdx force:source:push --targetusername ciorg"
+                /*rc = command "${toolbelt}/sfdx force:source:push --targetusername ciorg"
                 if (rc != 0) {
                     error 'Salesforce push to test scratch org failed.'
-                }
+                }*/
             }
 
 
