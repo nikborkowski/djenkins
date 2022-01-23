@@ -100,10 +100,10 @@ node {
             // -------------------------------------------------------------------------
 
             stage('Delete Test Scratch Org') {
-                rc = command "${toolbelt}/sfdx force:org:delete --targetusername ciorg --noprompt"
+                /*rc = command "${toolbelt}/sfdx force:org:delete --targetusername ciorg --noprompt"
                 if (rc != 0) {
                     error 'Salesforce test scratch org deletion failed.'
-                }
+                }*/
             }
 
 
