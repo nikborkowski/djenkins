@@ -139,7 +139,7 @@ node {
 
             stage('Create Package Install Scratch Org') {
                 //pwd /${toolbelt}/sfdx/bin/config
-                rc = command "${toolbelt}/sfdx force:org:create --targetdevhubusername HubOrg --setdefaultusername --definitionfile config/project-scratch-def.json --setalias installorg --wait 10 --durationdays 1"
+                rc = command "${toolbelt}/sfdx force:org:create --targetdevhubusername HubOrg --setdefaultusername --definitionfile ${toolbelt}/sfdx/bin/config/project-scratch-def.json --setalias installorg --wait 10 --durationdays 1"
                 if (rc != 0) {
                     error 'Salesforce package install scratch org creation failed.'
                 }
